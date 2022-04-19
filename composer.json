@@ -1,0 +1,29 @@
+{
+    "name": "wdelfuego/nova4-customizable-footer",
+    "description": "Customizable footer for Laravel's Nova 4",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "laravel/nova": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wdelfuego\\Nova4\\CustomizableFooter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Willem Vervuurt",
+            "email": "willem@studiodelfuego.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wdelfuego\\Nova4\\CustomizableFooter\\ServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    }
+}
