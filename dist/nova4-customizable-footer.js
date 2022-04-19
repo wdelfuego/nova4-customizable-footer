@@ -1,8 +1,27 @@
 window.addEventListener('load', function(event) {
-  let footer = document.querySelector("[dusk='flights-index-component']").nextElementSibling;
-  footer.innerHTML = '';
+
+  var nova = document.getElementById('nova');
+  var ps = nova.getElementsByTagName("p");
+  var footer = null;
   
-  Nova.request().get('/nova-vendor/wdelfuego/nova4-customizable-footer/footer-content').then(response => {
-      footer.innerHTML = response.data;
-  })
+  for(var i = 0; i < ps.length; i++)
+  {
+    if(ps[i].innerHTML.includes("Laravel LLC · by Taylor Otwell and David Hemphill"))
+    {
+      footer = ps[i].parentNode;
+      break;
+    }
+  }
+
+  if(footer == null)
+  {
+    console.log("wdelfuego/nova4-customizable-footer: couldn't select footer div, please create an issue at https://github.com/wdelfuego/nova4-customizable-footer/issues")
+  }
+  else
+  {
+    footer.innerHTML = '';
+    Nova.request().get('/nova-vendor/wdelfuego/nova4-customizable-footer/footer-content').then(response => {
+        footer.innerHTML = response.data;
+    })
+  }
 });
