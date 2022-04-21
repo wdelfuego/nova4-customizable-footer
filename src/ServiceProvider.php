@@ -26,7 +26,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         Nova::script('nova4-customizable-footer', $this->app->basePath("vendor/wdelfuego/nova4-customizable-footer/dist/nova4-customizable-footer.js"));
         
-        Nova::router(['nova'], 'nova-vendor/wdelfuego/nova4-customizable-footer')
+        Nova::router(['nova'], '/wdelfuego/nova4-customizable-footer')
             ->group($this->app->basePath('vendor/wdelfuego/nova4-customizable-footer/routes.php'));
     }
 }

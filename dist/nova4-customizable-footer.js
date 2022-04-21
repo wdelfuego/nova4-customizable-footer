@@ -20,7 +20,7 @@ window.addEventListener('load', function(event) {
   else
   {
     footer.innerHTML = '';
-    Nova.request().get('/nova-vendor/wdelfuego/nova4-customizable-footer/footer-content').then(response => {
+    Nova.request().get(Nova.config('base')+'/wdelfuego/nova4-customizable-footer/footer-content').then(response => {
         footer.innerHTML = response.data;
     })
   }
