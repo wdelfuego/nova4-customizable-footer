@@ -1,4 +1,4 @@
-This package reintroduces footer customization to Nova 4.
+This package reintroduces footer customization to Laravel's Nova 4.
 
 ## Installation
 Add the dependency to your project's `composer.json`:
@@ -20,4 +20,4 @@ Footer::set('<p class="text-center">Your own footer HTML</p>');
 
 ## Word of warning
 
-This package works by firing an Ajax request to the server to fetch the customized footer content and insert it into the DOM after the Nova interface has been loaded successfully. While the request to fetch the footer content is loading, the original footer content may still be visible briefly to the end user. This typically only happens when the user first loads Nova and should take much less than a second.
+This package works by updating the DOM after the Nova interface has been loaded successfully. Finding the footer element in the DOM is not an instantaneous process, the original footer content may still be visible to the end user for a brief moment. This typically only happens when the user first loads Nova.
