@@ -2,17 +2,14 @@
 
 namespace Wdelfuego\Nova4\CustomizableFooter;
 
+use Laravel\Nova\Nova;
+
 class Footer
 {
-    private static $content = '';
-    
     public static function set(string $content) : void
     {
-        self::$content = $content;
-    }
-    
-    public static function get() : string
-    {
-        return self::$content;
+        Nova::footer(function ($request) use ($content) {
+            return $content;
+        });
     }
 }

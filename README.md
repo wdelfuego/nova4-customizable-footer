@@ -1,3 +1,12 @@
+# Package deprecated
+Version 1.0.3 is the final version of this package.
+
+As of Nova 4.3, footer customization is available [natively](https://github.com/laravel/nova-issues/discussions/3892#discussioncomment-2682938) in Nova. 
+
+This package is no longer necessary and has been reduced to a wrapper around the native functionality for compatibility reasons, so that developers who don't switch to the native solution don't keep depending on the workaround implemented by previous versions of this package. Read on for the original (< 1.0.3) documentation of this package.
+
+---
+
 This package reintroduces footer customization to Laravel's Nova 4.
 
 ## Installation

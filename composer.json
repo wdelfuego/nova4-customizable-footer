@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "require": {
-        "laravel/nova": "^4.0"
+        "laravel/nova": "^4.3"
     },
     "autoload": {
         "psr-4": {
@@ -16,14 +16,5 @@
             "name": "Willem Vervuurt",
             "email": "willem@studiodelfuego.com"
         }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Wdelfuego\\Nova4\\CustomizableFooter\\ServiceProvider"
-            ],
-            "aliases": {
-            }
-        }
-    }
+    ]
 }
